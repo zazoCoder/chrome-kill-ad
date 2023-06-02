@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 260px;
+    height: 100%;
+}
+div{
+    box-sizing: border-box;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+}
+/* important */
+.info-wrap{
+    /* like */
+    width: 100%;
+    x: 1;
+    height: 180px;
+    nav-down: auto;
+    /* name */
+    display: block;
+    padding: 30px;
+    z-index: 10;
+}

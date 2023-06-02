@@ -1,0 +1,40 @@
+{
+  "name": "简书广告屏蔽",
+  "description": "屏蔽简书广告，防止查资料尴尬",
+  "version": "1.0.0",
+  "icons": { "16": "image/LOGO.png",
+           "48": "image/LOGO.png",
+          "128": "image/LOGO.png" },
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation",
+    "notifications",
+    "activeTab",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["lib/jquery-3.2.1.min.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"], 
+      "js": ["lib/jquery-3.2.1.min.js", "js/utils.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://sapi.k780.com/; object-src 'self'",
+  "browser_action": {
+    "default_icon": "image/LOGO.png",
+    "default_title": "简书屏蔽广告",
+    "default_popup": "index.html"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": ["page/newTask.html",
+                              "lib/*/*/*",
+                              "js/newTask.js"],
+  "update_url": "http://www.google.com/"
+}
+
